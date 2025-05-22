@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youmin Blog</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Youmin</h1>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 之後 Day2–Day5 會分別填充這五個區塊 -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          嗨，我是 Youmin，目前是一名前端工程師，專長於
+          HTML/CSS/JavaScript，以及 React 與
+          Next.js，熱衷打造互動式、響應式網頁。
+        </p>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML/CSS – 90%</li>
+          <li>JavaScript (ES6+) – 85%</li>
+          <li>React – 80%</li>
+          <li>Next.js – 75%</li>
+          <li>Git & GitHub – 80%</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <h3>個人靜態網站</h3>
+            <p>
+              使用 HTML5 + CSS3（Flex/Grid）與 GitHub Pages
+              部署，展示我的自我介紹與作品集。
+            </p>
+            <a
+              href="https://github.com/your-username/my-website"
+              target="_blank"
+              rel="noopener"
+              >查看專案</a
+            >
+          </li>
+          <li>
+            <h3>Todo List SPA</h3>
+            <p>
+              使用 React + Hooks，並以 localStorage
+              儲存資料，練習狀態管理與元件設計。
+            </p>
+            <a
+              href="https://github.com/your-username/react-todo"
+              target="_blank"
+              rel="noopener"
+              >查看專案</a
+            >
+          </li>
+          <!-- 如有第三、第四個專案，可依此類推 -->
+        </ul>
+      </section>
+      <section id="experience">
+        <h2>Experience / Education</h2>
+        <ul>
+          <li>
+            <strong>夜班駐點客服工程師｜高雄榮總</strong>
+            <em>2023.03 – 至今</em>
+            主要負責解決硬體相關問題，並協助使用者解決軟體相關問題，提升服務品質，並進行日常維護。
+          </li>
+          <li>
+            <strong>前端技術學習｜自學</strong>
+            <em>2023.03 – 至今</em>
+            透過聯成電腦學習了Python、C#、JavaScript、React、Next.js等前端技術，並進行練習，
+            正在努力籌備作品集。
+          </li>
+          <li>
+            <strong>生物實驗室(大學肄業)｜慈濟大學生命科學系</strong>
+            <em>2016.09 – 2020.7</em>
+            病理研究，並進行基因片段分析，並研究生命科學相關知識。
+          </li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>如果你想進一步交流或安排面試，歡迎透過以下方式聯絡我：</p>
+        <ul>
+          <li>
+            Email:
+            <a href="mailto:b105711134@gamil.com">b105711134@gamil.com</a>
+          </li>
+          <li>
+            GitHub:
+            <a
+              href="https://github.com/YouminLiou"
+              target="_blank"
+              rel="noopener"
+              >YouminLiou</a
+            >
+          </li>
+          <li>
+            CakeResume:
+            <a href="RESUME_URL" target="_blank" rel="noopener">我的線上履歷</a>
+          </li>
+        </ul>
+      </section>
+
+      <a href="YOUR_RESUME_URL" target="_blank" rel="noopener">
+        <button class="btn">View Full Resume</button>
+      </a>
+
+      <form
+        id="appointmentForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSecjoqPlsoHYklv_jUf7PFsMKwNtkJWxb8zGsYB6_7UuH-H6w/formResponse"
+        method="POST"
+        target="_blank"
+      >
+        <h3>預約練習／聯絡表單</h3>
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="entry.2043426024" required />
+
+        <label for="email">Email：</label>
+        <input type="email" id="email" name="entry.258982064" required />
+
+        <label for="topic">想討論的主題：</label>
+        <input type="text" id="topic" name="entry.1688194990" required />
+
+        <label for="datetime">預計時間：</label>
+        <input
+          type="datetime-local"
+          id="datetime"
+          name="entry.711961155"
+          required
+        />
+
+        <button type="submit" class="btn">送出預約</button>
+      </form>
+
+      <!-- 確保表單可跨瀏覽器與行動裝置使用 ： 使用 HTML5 原生欄位類型（email、datetime-local）並加上 required 驗證，減少 JS 依賴。-->
+      <!-- method="POST"  POST 能隱藏參數於 request body 中，比較不會洩露使用者資料於 URL。-->
+    </main>
+
+    <footer>
+      <p>© 2025 Youmin</p>
+    </footer>
+    <!-- 之後會引入 main.js -->
+    <!-- 引入 ScrollReveal 動畫庫 CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- 引入你自己的互動腳本 -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

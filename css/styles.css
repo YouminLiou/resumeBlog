@@ -1,0 +1,175 @@
+/* var(--…)讓樣式更具可維護性與一致性，一處修改立即全站生效，也方便後續實作深色/淺色切換。 */
+:root {
+  /* 色彩主題 */
+  --color-bg: #041e42; /* 深藍背景 */
+  --color-primary: #00aeef; /* 電光藍 */
+  --color-secondary: #1a1a1a; /* 接近黑 */
+  --color-text: #f5f5f5; /* 文字色 */
+
+  /* 字型設定 */
+  --font-base: "Roboto Mono", monospace;
+}
+
+/* 測試用，確保 CSS 正確載入
+body {
+  background-color: #041e42;
+}
+h1 {
+  color: #00aeef;
+} */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+/* justify-content: space-between能讓左右兩端元素平均分布，中間留空。 */
+/* Flexbox 可自動處理對齊與間距，更具彈性，也易於響應式調整。 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-secondary);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: var(--color-text);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+/* Main 區塊響應式 Grid 佈局 */
+main {
+  /* Flex 是一維佈局（水平或垂直），Grid 可做二維佈局，適合欄與列同時管理。 */
+  display: grid;
+  /* auto-fit + minmax它能自動適應螢幕寬度，在需要時自動換行，實現最小與最大欄寬的彈性佈局。 */
+  /* 最少每欄 300px，最多自動填滿 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* 統一 Section 樣式 */
+/* section {
+  background-color: var(--color-secondary);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+} */
+
+/* backdrop-filter 作用於元素背後的背景影像，才能讓背景模糊透出玻璃效果；filter 只會影響元素自身內容。 */
+/* rgba 控制透明度，讓背景能透出；box-shadow 則讓卡片看起來懸浮，增強立體感。 */
+section {
+  /* 半透明背景 + 類玻璃質感 */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* 淺白色半透明，模擬玻璃的反射與透光。*/
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); /* 讓卡片背後的背景模糊，呈現玻璃穿透感。*/
+
+  /* 原本的圓角與內距保留 */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+
+  /* 加強立體感的陰影 */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* 加強卡片浮在背景上的立體感。*/
+}
+
+section h2 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+/* Neumorphism 按鈕樣式 */
+/* 透過微妙的高光與陰影，讓按鈕看起來像是浮在背景之上，增強互動焦點。 */
+/* 雙重陰影：利用一個較亮的陰影在上方、一個較暗的陰影在下方，模擬光源照射與物件陰影，才能產生凹凸感。 */
+.btn {
+  background: var(--color-secondary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--font-base);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  /* 上方高光 + 下方陰影，製造浮起感 */
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.2s ease; /* 讓按下與釋放之間的陰影變化更順暢，提升使用者體驗。 */
+}
+
+.btn:active {
+  /* 按下時，內凹效果 */
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 表單樣式調整 */
+#appointmentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* 欄位間距 */
+  max-width: 400px; /* 表單最大寬度 */
+  margin: 2rem auto; /* 置中並與上下保持距離 */
+}
+
+#appointmentForm h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+#appointmentForm label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+#appointmentForm input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  box-sizing: border-box;
+}
+
+#appointmentForm button[type="submit"] {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  /* 重用 Neumorphism 按鈕樣式 */
+  background: var(--color-secondary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.2s ease;
+}
+
+#appointmentForm button[type="submit"]:active {
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
