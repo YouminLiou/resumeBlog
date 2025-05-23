@@ -221,3 +221,64 @@ section h2 {
   /* max-width:1200px + margin:auto：中大型螢幕不會太撐 */
   padding: 0 1rem; /* 左右留白 */
 }
+
+/* ===== 單篇文章頁排版 ===== */
+/* 讓文章區域有明顯的「卡片感」，並限制最大全寬，提高可讀性。 */
+.postContainer {
+  max-width: 800px; /* 限制行寬，過長不易閱讀 */
+  margin: 2rem auto; /* 上下 2rem，左右置中 */
+  padding: 1rem 1.5rem; /* 內距讓文字不貼邊 */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(6px);
+}
+
+/* 行高 (line-height) 與 段落間距 (margin)：文字不擁擠，更好閱讀。 */
+.postContainer p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.postContainer h2,
+.postContainer h3 {
+  margin: 2rem 0 1rem;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.postContainer ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.postContainer li {
+  margin-bottom: 0.5rem;
+}
+
+.postContainer pre,
+.postContainer code {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: var(--font-base);
+  line-height: 1.4;
+}
+
+.postContainer em {
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+/* 文章底部如果有連結（回到部落格） */
+.postContainer nav a {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.postContainer nav a:hover {
+  text-decoration: underline;
+}

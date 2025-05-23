@@ -16,54 +16,58 @@
       </nav>
     </header>
     <main>
-      <p><em>發布日期：2025/5/22</em></p>
+      <div class="postContainer">
+        <p><em>發布日期：2025/5/22</em></p>
 
-      <h2>網站結構設計與語意化規劃</h2>
-      <pre><code>&lt;header&gt;
-    &lt;main&gt;
-    &lt;footer&gt;</code></pre>
-      <p>
-        整體以 section + id 控制 anchor navigation，避免未來引入 Router 或 SPA
-        架構時要重構 DOM 結構。
-      </p>
+        <h2>網站結構設計與語意化規劃</h2>
+        <pre><code>&lt;header&gt;
+      &lt;main&gt;
+      &lt;footer&gt;</code></pre>
+        <p>
+          整體以 section + id 控制 anchor navigation，避免未來引入 Router 或 SPA
+          架構時要重構 DOM 結構。
+        </p>
 
-      <h2>視覺系統：Glassmorphism + Neumorphism</h2>
-      <ul>
-        <li>背景採 radial 深藍 + 透明玻璃模糊</li>
-        <li>卡片區塊採用 Neumorphism 陰影設計</li>
-        <li>字體採用 Roboto Mono</li>
-        <li>RWD 使用 CSS Flex + Clamp</li>
-      </ul>
+        <h2>視覺系統：Glassmorphism + Neumorphism</h2>
+        <ul>
+          <li>背景採 radial 深藍 + 透明玻璃模糊</li>
+          <li>卡片區塊採用 Neumorphism 陰影設計</li>
+          <li>字體採用 Roboto Mono</li>
+          <li>RWD 使用 CSS Flex + Clamp</li>
+        </ul>
 
-      <h2>元件模組化與樣式管理</h2>
-      <p>
-        樣式集中於 styles.css，使用 CSS 變數與 box-shadow token
-        模組化，利於轉移到 Sass / Tailwind 架構。
-      </p>
+        <h2>元件模組化與樣式管理</h2>
+        <p>
+          樣式集中於 styles.css，使用 CSS 變數與 box-shadow token
+          模組化，利於轉移到 Sass / Tailwind 架構。
+        </p>
 
-      <h2>表單功能：支援 Google Form 後端串接</h2>
-      <p>使用 Google Form 的 formResponse API，無需 JS 後端服務，簡潔穩定。</p>
+        <h2>表單功能：支援 Google Form 後端串接</h2>
+        <p>
+          使用 Google Form 的 formResponse API，無需 JS 後端服務，簡潔穩定。
+        </p>
 
-      <h2>部署架構</h2>
-      <ul>
-        <li>GitHub + main 分支管理</li>
-        <li>Vercel 一鍵部署</li>
-        <li>加入 SEO、OG、Twitter Meta</li>
-      </ul>
+        <h2>部署架構</h2>
+        <ul>
+          <li>GitHub + main 分支管理</li>
+          <li>Vercel 一鍵部署</li>
+          <li>加入 SEO、OG、Twitter Meta</li>
+        </ul>
 
-      <h2>Lighthouse 測試分數</h2>
-      <ul>
-        <li>Performance：95+</li>
-        <li>Accessibility：100</li>
-        <li>Best Practices：100</li>
-        <li>SEO：100</li>
-      </ul>
+        <h2>Lighthouse 測試分數</h2>
+        <ul>
+          <li>Performance：95+</li>
+          <li>Accessibility：100</li>
+          <li>Best Practices：100</li>
+          <li>SEO：100</li>
+        </ul>
 
-      <h2>總結</h2>
-      <p>
-        這個履歷網站整合了切版能力、SEO
-        優化、表單串接與部署流程，是我作為前端工程師的整合實作。
-      </p>
+        <h2>總結</h2>
+        <p>
+          這個履歷網站整合了切版能力、SEO
+          優化、表單串接與部署流程，是我作為前端工程師的整合實作。
+        </p>
+      </div>
     </main>
     <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
     <script src="../js/main.js"></script>

@@ -16,54 +16,57 @@
       </nav>
     </header>
     <main>
-      <p><em>發布日期：2025/5/23</em></p>
+      <div class="postContainer">
+        <p><em>發布日期：2025/5/23</em></p>
 
-      <h2>1. 初始化本地 Git 儲存庫</h2>
-      <pre><code>
+        <h2>1. 初始化本地 Git 儲存庫</h2>
+        <pre><code>
   # 在專案根目錄執行
   git init
   git add .
   git commit -m "chore: 初次提交專案"
       </code></pre>
-      <p>
-        透過 <code>git init</code> 建立本地儲存庫，並第一次把所有檔案加入版控。
-      </p>
+        <p>
+          透過
+          <code>git init</code> 建立本地儲存庫，並第一次把所有檔案加入版控。
+        </p>
 
-      <h2>2. 在 GitHub 建立遠端 Repository</h2>
-      <ol>
-        <li>登入 GitHub，點「New Repository」</li>
-        <li>輸入 Repo 名稱（如 <code>resumeBlog</code>）、選擇公開或私有</li>
-        <li>複製 HTTPS 或 SSH 連結</li>
-      </ol>
+        <h2>2. 在 GitHub 建立遠端 Repository</h2>
+        <ol>
+          <li>登入 GitHub，點「New Repository」</li>
+          <li>輸入 Repo 名稱（如 <code>resumeBlog</code>）、選擇公開或私有</li>
+          <li>複製 HTTPS 或 SSH 連結</li>
+        </ol>
 
-      <h2>3. 設定遠端並推送</h2>
-      <pre><code>
+        <h2>3. 設定遠端並推送</h2>
+        <pre><code>
   # 以 SSH 為例
   git remote add origin git@github.com:YourName/resumeBlog.git
   git branch -M main
   git push -u origin main
       </code></pre>
-      <p>
-        如果遇到「Authentication failed」，請確認你的 SSH key 是否已經加到
-        GitHub 帳號內。
-      </p>
+        <p>
+          如果遇到「Authentication failed」，請確認你的 SSH key 是否已經加到
+          GitHub 帳號內。
+        </p>
 
-      <h2>4. 利用 Vercel 一鍵部署</h2>
-      <ul>
-        <li>在 Vercel 控制台按「Import Git Repository」</li>
-        <li>選擇你的 <code>resumeBlog</code> Repo</li>
-        <li>Framework 選「Other」，Output Directory 設 <code>.</code></li>
-        <li>
-          Deploy 完成後即可透過 <code>your-name.vercel.app/blog</code> 訪問
-        </li>
-      </ul>
+        <h2>4. 利用 Vercel 一鍵部署</h2>
+        <ul>
+          <li>在 Vercel 控制台按「Import Git Repository」</li>
+          <li>選擇你的 <code>resumeBlog</code> Repo</li>
+          <li>Framework 選「Other」，Output Directory 設 <code>.</code></li>
+          <li>
+            Deploy 完成後即可透過 <code>your-name.vercel.app/blog</code> 訪問
+          </li>
+        </ul>
 
-      <h2>5. 小結</h2>
-      <p>
-        完整流程：<code
-          >git init → commit → remote add → push → Vercel deploy</code
-        >，實現從本地到雲端的持續部署（CI）與版本管理。
-      </p>
+        <h2>5. 小結</h2>
+        <p>
+          完整流程：<code
+            >git init → commit → remote add → push → Vercel deploy</code
+          >，實現從本地到雲端的持續部署（CI）與版本管理。
+        </p>
+      </div>
     </main>
     <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
     <script src="../js/main.js"></script>
