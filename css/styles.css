@@ -173,3 +173,29 @@ section h2 {
   box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     inset 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
+
+/* 美化文章摘要卡片 */
+.articlePreview {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.articlePreview:hover {
+  transform: translateY(-4px);
+}
+
+.articlePreview h2 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.articlePreview a {
+  text-decoration: none;
+  color: inherit;
+}
