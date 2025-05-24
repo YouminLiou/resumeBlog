@@ -312,3 +312,30 @@ footer {
   padding: 2rem 0;
   color: rgba(255, 255, 255, 0.5);
 }
+
+/* 作品集列表 */
+.projectCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.projectCard:hover {
+  transform: translateY(-4px);
+}
+.projectCard h2 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+.projectCard a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.projectCard a:hover {
+  text-decoration: underline;
+}
